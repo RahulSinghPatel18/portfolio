@@ -34,7 +34,7 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/vaculator.jpg",
+    image: "/assets/projects/vaculator.png",
     tags: [
       { id: 1, name: "JavaScript", path: "/assets/logos/javascript.svg" },
       { id: 2, name: "React", path: "/assets/logos/react.svg" },
@@ -55,7 +55,7 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/vizualytic.jpg",
+    image: "/assets/projects/vizualytic.png",
     tags: [
       { id: 1, name: "Next.js", path: "/assets/logos/nextjs.svg" },
       { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
@@ -78,7 +78,7 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/studyviser.jpg",
+    image: "/assets/projects/studyviser.png",
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "Node.js", path: "/assets/logos/nodejs.svg" },
@@ -94,13 +94,11 @@ export const myProjects = [
       "A social media platform enabling users to upload, like, delete, comment, chat, and post videos/photos, including status updates.",
     subDescription: [
       "Developed core social features: media upload, like, delete, comment, chat, and status updates.",
-      "Used MERN stack for scalable, real-time interactions.",
-      "Ensured secure file handling and user authentication.",
       "Followed best practices: modular code, error handling, and efficient state management.",
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/mediastranger.jpg",
+    image: "/assets/projects/mediastranger.png",
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "Node.js", path: "/assets/logos/nodejs.svg" },
@@ -109,29 +107,9 @@ export const myProjects = [
       { id: 5, name: "Socket.io", path: "/assets/logos/socketio.svg" },
     ],
   },
+  
   {
     id: 6,
-    title: "TMDB",
-    description:
-      "A dynamic web app leveraging the TMDB API to display categorized movie, image, and person data with real-time updates.",
-    subDescription: [
-      "Integrated TMDB API for fetching and displaying categorized movie, image, and person data.",
-      "Implemented dynamic routing and real-time API integration for seamless navigation.",
-      "Optimized for performance and user experience with code splitting and lazy loading.",
-      "Applied best practices: error boundaries, reusable components, and clean state management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/tmdb.jpg",
-    tags: [
-      { id: 1, name: "React", path: "/assets/logos/react.svg" },
-      { id: 2, name: "TMDB API", path: "/assets/logos/tmdb.svg" },
-      { id: 3, name: "JavaScript", path: "/assets/logos/javascript.svg" },
-      { id: 4, name: "Material UI", path: "/assets/logos/materialui.svg" },
-    ],
-  },
-  {
-    id: 7,
     title: "Shoppy",
     description:
       "A modern e-commerce website with product categories, filtering, and dynamic data display for efficient online shopping.",
@@ -143,12 +121,33 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/shopping.jpg",
+    image: "/assets/projects/shopping.png",
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "JavaScript", path: "/assets/logos/javascript.svg" },
       { id: 3, name: "API", path: "/assets/logos/api.svg" },
       { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+    ],
+  },
+  {
+    id: 7,
+    title: "TMDB",
+    description:
+      "A dynamic web app leveraging the TMDB API to display categorized movie, image, and person data with real-time updates.",
+    subDescription: [
+      "Integrated TMDB API for fetching and displaying categorized movie, image, and person data.",
+      "Implemented dynamic routing and real-time API integration for seamless navigation.",
+      "Optimized for performance and user experience with code splitting and lazy loading.",
+      "Applied best practices: error boundaries, reusable components, and clean state management.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/tmdb.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "TMDB API", path: "/assets/logos/tmdb.svg" },
+      { id: 3, name: "JavaScript", path: "/assets/logos/javascript.svg" },
+      { id: 4, name: "Material UI", path: "/assets/logos/materialui.svg" },
     ],
   },
 ];
