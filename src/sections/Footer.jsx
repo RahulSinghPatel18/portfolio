@@ -1,23 +1,53 @@
 import { mySocials } from "../constants";
+
 const Footer = () => {
   return (
-    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
-      <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
-      <div className="flex gap-2">
-        <p>Terms & Conditions</p>
-        <p>|</p>
-        <p>Privacy Policy</p>
-      </div>
-      <div className="flex gap-3">
-        {mySocials.map((social, index) => (
-          <a href={social.href} key={index}>
-            <img src={social.icon} className="w-5 h-5" alt={social.name} />
+    <footer className="w-full bg-neutral-900/80 border-t border-neutral-800 py-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-4">
+        <div className="flex items-center gap-4">
+          <span className="text-lg font-semibold text-white tracking-wide">Rahul</span>
+          <span className="hidden md:inline-block text-neutral-500">|</span>
+          <span className="text-neutral-400 text-sm">© 2025. All rights reserved.</span>
+        </div>
+        <div className="flex gap-6">
+          <a
+            href="/terms"
+            className="text-neutral-400 hover:text-white transition-colors text-sm"
+          >
+            Terms & Conditions
           </a>
-        ))}
+          <span className="text-neutral-600">|</span>
+          <a
+            href="/privacy"
+            className="text-neutral-400 hover:text-white transition-colors text-sm"
+          >
+            Privacy Policy
+          </a>
+        </div>
+        <div className="flex gap-4">
+          {mySocials.map((social) => (
+            <a
+              href={social.href}
+              key={social.name}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+              aria-label={social.name}
+            >
+              <img
+                src={social.icon}
+                alt={social.name}
+                className="w-6 h-6 opacity-80 group-hover:opacity-100 transition"
+              />
+            </a>
+          ))}
+        </div>
       </div>
-      <p>© 2025 Ali. All rights reserved.</p>
-    </section>
+    </footer>
   );
 };
 
 export default Footer;
+ 
+
+ 
