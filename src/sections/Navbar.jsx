@@ -30,23 +30,25 @@ function Navigation() {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
+    <header className="fixed inset-x-0 top-0 z-30 w-full bg-gradient-to-b from-neutral-900/80 to-transparent backdrop-blur-md shadow-lg">
       <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2 sm:py-0">
+        <div className="flex items-center justify-between py-3">
           <a
             href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+            className="text-2xl font-extrabold tracking-tight text-white transition-colors hover:text-indigo-400"
+            aria-label="Home"
           >
-           Rahul
+            Rahul
           </a>
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="sm:hidden flex items-center justify-center rounded-full p-2 transition-colors bg-neutral-800/60 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             <img
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              className="w-6 h-6"
-              alt="toggle"
+              className="w-7 h-7"
+              alt={isOpen ? "Close menu" : "Open menu"}
             />
           </button>
           <nav className="hidden sm:flex">
@@ -54,20 +56,22 @@ const Navbar = () => {
           </nav>
         </div>
       </div>
-      {isOpen && (
-        <motion.div
-          className="block overflow-hidden text-center sm:hidden"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          style={{ maxHeight: "100vh" }}
-          transition={{ duration: 1 }}
-        >
-          <nav className="pb-5">
+      <motion.div
+        className={`sm:hidden fixed inset-x-0 top-0 z-40 bg-neutral-900/95 backdrop-blur-lg transition-all duration-300 ${
+          isOpen ? "block" : "hidden"
+        }`}
+        initial={false}
+        animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="flex flex-col items-center justify-center h-full pt-24">
+          <nav>
             <Navigation />
           </nav>
-        </motion.div>
-      )}
-    </div>
+        </div>
+      </motion.div>
+    </header>
   );
 };
 

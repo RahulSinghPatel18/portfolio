@@ -152,28 +152,6 @@ export const myProjects = [
   },
 ];
 
-export const mySocials = [
-  {
-    name: "WhatsApp",
-    href: "",
-    icon: "/assets/socials/whatsApp.svg",
-  },
-  {
-    name: "Linkedin",
-    href: "https://www.linkedin.com/in/rahul-singh-patel-166a15256",
-    icon: "/assets/socials/linkedIn.svg",
-  },
-  {
-    name: "Instagram",
-    href: "",
-    icon: "/assets/socials/instagram.svg",
-  },
-  {
-    name: "GitHub",
-    href: "https://github.com/rahulsinghpatel",
-    icon: "/assets/socials/github.svg",
-  },
-];
 
 export const experiences = [
   {

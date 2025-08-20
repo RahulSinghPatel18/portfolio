@@ -3,35 +3,57 @@ import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/FrameWorks";
+import { FaDownload } from "react-icons/fa6";
+
+const RESUME_URL = ""; // Update with your actual resume path
+
+const DownloadResumeButton = () => (
+  <div className="flex flex-col md:flex-row items-center gap-4">
+    <a
+      href={RESUME_URL}
+      download
+      className="inline-flex text-sm items-center gap-2 px-5 py-3 rounded-full bg-black border border-gray-400 text-white shadow-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      aria-label=" Resume"
+    >
+      <FaDownload className="w-5 h-5" />
+Resume
+    </a>
+  </div>
+);
+
 
 const About = () => {
-  const grid2Container = useRef();
+  const grid2Container = useRef(null);
+
   return (
     <section className="c-space section-spacing" id="about">
-      <h2 className="text-heading">About Me</h2>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <h2 className="text-heading">About Me</h2>
+        <DownloadResumeButton />
+      </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
-        <div className="flex items-end grid-default-color grid-1">
+        <div className="flex items-end grid-default-color grid-1 relative">
           <img
             src="assets/coding-pov.png"
+            alt="Coding POV"
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Ali Sanati</p>
+            <p className="headtext">Hi, I'm Rahul Singh Patel</p>
             <p className="subtext">
-              Over the last 4 years, I developed my frontend and backend dev
-              skills to deliver dynamic and software and web applications.
+              Over the last 4 years, I have developed my frontend and backend skills to deliver dynamic software and web applications.
             </p>
           </div>
-          <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo-500" />
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
           <div
             ref={grid2Container}
-            className="flex items-center justify-center w-full h-full"
+            className="flex items-center justify-center w-full h-full relative"
           >
-            <p className="flex items-end text-5xl text-gray-500">
+            <p className="flex items-end text-5xl text-gray-500 font-bold tracking-tight select-none">
               CODE IS CRAFT
             </p>
             <Card
@@ -77,11 +99,11 @@ const About = () => {
           </div>
         </div>
         {/* Grid 3 */}
-        <div className="grid-black-color grid-3">
+        <div className="grid-black-color grid-3 relative">
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">
-              I'm based in Mars, and open to remote work worldwide
+              I'm based in India, and open to remote work worldwide.
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -95,15 +117,15 @@ const About = () => {
               Do you want to start a project together?
             </p>
             <CopyEmailButton />
+            <DownloadResumeButton />
           </div>
         </div>
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5">
+        <div className="grid-default-color grid-5 relative">
           <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
+            <p className="headtext">Tech Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
-              allow me to build robust and scalable applications
+              I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable applications.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
