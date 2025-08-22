@@ -23,17 +23,17 @@ export const Timeline = ({ data }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="c-space section-spacing" ref={containerRef}>
+    <div className="section-spacing px-4 sm:px-6 lg:px-8" ref={containerRef}>
       <h2 className="text-heading">My Work Experience</h2>
       <div ref={ref} className="relative pb-20">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-8 sm:pt-10 md:pt-20 lg:pt-40 md:gap-10"
           >
-            <div className="sticky z-40 flex flex-col items-center self-start max-w-xs md:flex-row top-40 lg:max-w-sm md:w-full">
-              <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-midnight">
-                <div className="w-4 h-4 p-2 border rounded-full bg-neutral-800 border-neutral-700" />
+            <div className="sticky z-40 flex flex-col items-center self-start max-w-xs md:flex-row top-20 sm:top-32 md:top-40 lg:max-w-sm md:w-full">
+              <div className="absolute flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full -left-[12px] sm:-left-[15px] bg-midnight">
+                <div className="w-3 h-3 sm:w-4 sm:h-4 p-1 sm:p-2 border rounded-full bg-neutral-800 border-neutral-700" />
               </div>
               <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-4xl text-neutral-300">
                 <h3>{item.date}</h3>
@@ -42,13 +42,14 @@ export const Timeline = ({ data }) => {
               </div>
             </div>
 
-            <div className="relative w-full pl-20 pr-4 md:pl-4">
-              <div className="block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden ">
-                <h3>{item.date}</h3>
-                <h3>{item.job}</h3>
+            <div className="relative w-full pl-16 sm:pl-20 pr-4 md:pl-4">
+              <div className="block mb-4 text-lg sm:text-xl md:text-2xl font-bold text-left text-neutral-300 md:hidden">
+                <h3 className="text-white">{item.date}</h3>
+                <h3 className="text-indigo-400">{item.title}</h3>
+                <h3 className="text-neutral-400">{item.job}</h3>
               </div>
               {item.contents.map((content, index) => (
-                <p className="mb-3 font-normal text-neutral-400" key={index}>
+                <p className="mb-3 font-normal text-neutral-400 text-sm sm:text-base leading-relaxed" key={index}>
                   {content}
                 </p>
               ))}

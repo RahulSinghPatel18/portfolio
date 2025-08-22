@@ -47,6 +47,7 @@
     }
   }
 }
+
 body {
   background: #030412;
   font-family: "Funnel Display", sans-serif;
@@ -56,7 +57,7 @@ body {
 }
 
 .c-space {
-  @apply sm:px-10 px-5 lg:px-15;
+  @apply px-4 sm:px-6 lg:px-8;
 }
 
 .hover-animation {
@@ -81,16 +82,17 @@ body {
 
 /* Navigation */
 .nav-ul {
-  @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
+  @apply flex flex-col items-center gap-4 md:flex-row md:gap-6 relative z-20;
 }
 
 .nav-li {
-  @apply text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+  @apply text-neutral-400 hover:text-white transition-colors duration-200 md:w-auto w-full text-center;
 }
 
 .nav-link {
-  @apply text-lg md:text-base hover:text-white transition-colors;
+  @apply text-lg md:text-base hover:text-white transition-colors duration-200 block w-full py-3 md:py-2 px-4 md:px-2 rounded-lg md:rounded-none md:bg-transparent hover:bg-neutral-800/50 md:hover:bg-transparent;
 }
+
 /* Button Components */
 .btn {
   @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;

@@ -1,34 +1,57 @@
 import { useState } from "react";
-import { motion } from "motion/react";
-function Navigation() {
+import { motion } from "framer-motion";
+import { FaBars, FaTimes } from "react-icons/fa";
+
+// Navigation links component
+function Navigation({ onLinkClick, isMobile = false }) {
   return (
-    <ul className="nav-ul">
-      <li className="nav-li">
-        <a className="nav-link" href="#home">
+    <ul className={`flex ${isMobile ? 'flex-col items-start space-y-8 w-full' : 'flex-col sm:flex-row items-center gap-8 sm:gap-6'}`}>
+      <li className={isMobile ? 'w-full' : ''}>
+        <a 
+          className={`nav-link ${isMobile ? 'text-2xl font-medium w-full text-left' : ''}`} 
+          href="#home" 
+          onClick={onLinkClick}
+        >
           Home
         </a>
       </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#about">
+      <li className={isMobile ? 'w-full' : ''}>
+        <a 
+          className={`nav-link ${isMobile ? 'text-2xl font-medium w-full text-left' : ''}`} 
+          href="#about" 
+          onClick={onLinkClick}
+        >
           About
         </a>
       </li>
-
-      <li className="nav-li">
-        <a className="nav-link" href="#work">
+      <li className={isMobile ? 'w-full' : ''}>
+        <a 
+          className={`nav-link ${isMobile ? 'text-2xl font-medium w-full text-left' : ''}`} 
+          href="#work" 
+          onClick={onLinkClick}
+        >
           Work
         </a>
       </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#contact">
+      <li className={isMobile ? 'w-full' : ''}>
+        <a 
+          className={`nav-link ${isMobile ? 'text-2xl font-medium w-full text-left' : ''}`} 
+          href="#contact" 
+          onClick={onLinkClick}
+        >
           Contact
         </a>
       </li>
     </ul>
   );
 }
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Close menu on link click (mobile)
+  const handleLinkClick = () => setIsOpen(false);
+
   return (
     <header className="fixed inset-x-0 top-0 z-30 w-full bg-gradient-to-b from-neutral-900/80 to-transparent backdrop-blur-md shadow-lg">
       <div className="mx-auto c-space max-w-7xl">
@@ -40,34 +63,37 @@ const Navbar = () => {
           >
             Rahul
           </a>
+          {/* Hamburger/Close button for mobile */}
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="sm:hidden flex items-center justify-center rounded-full p-2 transition-colors bg-neutral-800/60 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="sm:hidden flex items-center justify-center rounded-full p-2 transition-colors bg-neutral-800/60 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 z-50"
             aria-label={isOpen ? "Close menu" : "Open menu"}
+            type="button"
           >
-            <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              className="w-7 h-7"
-              alt={isOpen ? "Close menu" : "Open menu"}
-            />
+            {isOpen ? (
+              <FaTimes className="w-5 h-5 text-white" />
+            ) : (
+              <FaBars className="w-5 h-5 text-white" />
+            )}
           </button>
-          <nav className="hidden sm:flex">
+          <nav className="hidden sm:flex items-center">
             <Navigation />
           </nav>
         </div>
       </div>
+      {/* Mobile menu overlay */}
       <motion.div
-        className={`sm:hidden fixed inset-x-0 top-0 z-40 bg-neutral-900/95 backdrop-blur-lg transition-all duration-300 ${
-          isOpen ? "block" : "hidden"
+        className={`sm:hidden fixed inset-0 z-40 bg-neutral-900/95 backdrop-blur-lg transition-all duration-300 ${
+          isOpen ? "flex" : "hidden"
         }`}
         initial={false}
         animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
         style={{ minHeight: "100vh" }}
       >
-        <div className="flex flex-col items-center justify-center h-full pt-24">
-          <nav>
-            <Navigation />
+        <div className="flex flex-col items-start justify-start h-full pt-24 px-30">
+          <nav className="w-full">
+            <Navigation onLinkClick={handleLinkClick} isMobile={true} />
           </nav>
         </div>
       </motion.div>

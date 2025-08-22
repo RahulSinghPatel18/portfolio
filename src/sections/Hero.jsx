@@ -9,27 +9,32 @@ import { Suspense } from "react";
 import Loader from "../components/Loader";
 
 const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 853 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  
   return (
-    <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space">
-      <HeroText />
+    <section className="relative flex flex-col items-center justify-start min-h-screen w-full overflow-hidden">
+      {/* Hero Text - Positioned absolutely for proper layering */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <HeroText />
+      </div>
+      
+      {/* Background Elements */}
       <ParallaxBackground />
-      <figure
-        className="absolute inset-0"
-        style={{ width: "100vw", height: "100vh" }}
-      >
+      
+      {/* 3D Canvas - Full viewport */}
+      <div className="absolute inset-0 w-full h-full">
         <Canvas camera={{ position: [0, 1, 3] }}>
           <Suspense fallback={<Loader />}>
             <Float>
               <Astronaut
-                scale={isMobile && 0.23}
-                position={isMobile && [0, -1.5, 0]}
+                scale={isMobile ? 0.2 : 0.3}
+                position={isMobile ? [0, -1.5, 0] : [0, -1, 0]}
               />
             </Float>
             <Rig />
           </Suspense>
         </Canvas>
-      </figure>
+      </div>
     </section>
   );
 };
