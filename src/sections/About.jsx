@@ -81,21 +81,97 @@ const About = () => {
               text="SRP"
               containerRef={grid2Container}
             />
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
-              containerRef={grid2Container}
-            />
+            {/* Modern SVGs for frontend tech */}
+            <div
+              style={{
+                position: "absolute",
+                top: "70%",
+                left: "70%",
+                transform: "rotate(30deg)",
+              }}
+              className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500 via-cyan-400 to-blue-700 rounded-full shadow-lg ring-2 ring-blue-300"
+            >
+              {/* React SVG */}
+              <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9" aria-label="React">
+                <circle cx="24" cy="24" r="22" fill="#222" />
+                <g>
+                  <ellipse cx="24" cy="24" rx="10" ry="4.5" stroke="#61DAFB" strokeWidth="2" fill="none"/>
+                  <ellipse cx="24" cy="24" rx="4.5" ry="10" stroke="#61DAFB" strokeWidth="2" fill="none" transform="rotate(60 24 24)"/>
+                  <ellipse cx="24" cy="24" rx="4.5" ry="10" stroke="#61DAFB" strokeWidth="2" fill="none" transform="rotate(120 24 24)"/>
+                  <circle cx="24" cy="24" r="2.5" fill="#61DAFB"/>
+                </g>
+              </svg>
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                top: "70%",
+                left: "25%",
+                transform: "rotate(-45deg)",
+              }}
+              className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-yellow-400 via-yellow-300 to-yellow-500 rounded-full shadow-lg ring-2 ring-yellow-200"
+            >
+              {/* JavaScript SVG */}
+              <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9" aria-label="JavaScript">
+                <rect x="2" y="2" width="44" height="44" rx="10" fill="#F7DF1E"/>
+                <text x="50%" y="60%" textAnchor="middle" fill="#222" fontSize="18" fontWeight="bold" fontFamily="Arial">JS</text>
+              </svg>
+            </div>
+            {/* Material UI SVG */}
+            <div
+              style={{
+                position: "absolute",
+                top: "5%",
+                left: "10%",
+                transform: "rotate(-45deg)",
+              }}
+              className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-400 via-blue-600 to-indigo-700 rounded-full shadow-lg ring-2 ring-blue-200"
+            >
+              <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9" aria-label="Material UI">
+                <g>
+                  <rect width="48" height="48" rx="12" fill="#fff" />
+                  <path d="M8 12.5V35.5L24 44V39.5L12 33.5V15.5L8 12.5Z" fill="#1976D2"/>
+                  <path d="M40 12.5V35.5L24 44V39.5L36 33.5V15.5L40 12.5Z" fill="#1976D2"/>
+                  <path d="M24 4L40 12.5L24 21L8 12.5L24 4Z" fill="#2196F3"/>
+                  <path d="M24 21V44" stroke="#1976D2" strokeWidth="2"/>
+                </g>
+              </svg>
+            </div>
+            {/* Framer Motion SVG */}
+            <div
+              style={{
+                position: "absolute",
+                top: "10%",
+                left: "38%",
+                transform: "rotate(20deg)",
+              }}
+              className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-fuchsia-500 via-purple-500 to-indigo-500 rounded-full shadow-lg ring-2 ring-fuchsia-200"
+            >
+              <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9" aria-label="Framer Motion">
+                <g>
+                  <rect width="48" height="48" rx="12" fill="#fff" />
+                  <polygon points="12,6 36,6 36,18 24,18 24,30 36,30 36,42 12,42 12,30 24,30 24,18 12,18" fill="#A259FF"/>
+                </g>
+              </svg>
+            </div>
+            {/* GSAP SVG */}
+            <div
+              style={{
+                position: "absolute",
+                top: "60%",
+                left: "45%",
+                transform: "rotate(-30deg)",
+              }}
+              className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-green-400 via-green-600 to-lime-500 rounded-full shadow-lg ring-2 ring-green-200"
+            >
+              <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9" aria-label="GSAP">
+                <g>
+                  <rect width="48" height="48" rx="12" fill="#fff" />
+                  <path d="M24 8L40 40H8L24 8Z" fill="#88CE02"/>
+                  <text x="24" y="34" textAnchor="middle" fill="#222" fontSize="12" fontWeight="bold" fontFamily="Arial">GSAP</text>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
         {/* Grid 3 */}

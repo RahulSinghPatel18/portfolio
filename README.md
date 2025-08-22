@@ -1,116 +1,29 @@
-<!-- # 🚀 3D Developer Portfolio
 
-A modern, animated 3D developer portfolio built with React, Three.js, TailwindCSS, and motion effects — designed to help you stand out and showcase your skills creatively.
+## 👋 Hi, I'm Rahul Singh Patel
 
-![3d Portfolio Screenshot GitHub](https://github.com/user-attachments/assets/9b0ed20e-074e-4f2a-81d8-20c9da751e9e)
-
----
-
-## 📚 Table of Contents
-
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Assets](#-assets)
-- [Contact Me](#-contact-me)
-- [Suggestions or Feedback](#-suggestions-or-feedback)
-- [Like This Project?](#-like-this-project)
+### 🚀 Frontend Developer | React.js | Next.js | UI/UX Enthusiast
 
 ---
 
-## ✨ Features
+### 💡 About Me
 
-- 🔥 3D visuals powered by **React Three Fiber** and **Drei**
-- ⚡ Smooth transitions and scroll-based animations using **Framer Motion**
-- 🎨 Clean, responsive UI with **TailwindCSS**
-- 💌 Working contact form using **EmailJS**
-- 🧱 Beautiful UI enhancements with **Aceternity UI** and **Magic UI**
-- 🚀 Lightning-fast development with **Vite**
+Results-driven frontend developer with 1+ years of experience building scalable, high-performance web applications using modern JavaScript frameworks. I am passionate about delivering accessible, responsive, and pixel-perfect user interfaces that create real business value. I thrive in collaborative, agile teams and enjoy architecting clean, maintainable solutions to complex problems.
 
----
-
-## 🛠 Tech Stack
-
-| Tech              | Description                           |
-|-------------------|---------------------------------------|
-| React             | Front-end JavaScript library          |
-| Vite              | Fast bundler and dev environment      |
-| TailwindCSS       | Utility-first CSS framework           |
-| React Three Fiber | 3D rendering with Three.js in React   |
-| Drei              | Helpers and abstractions for R3F      |
-| Framer Motion     | Animation library for React           |
-| EmailJS           | Form handling and email integration   |
-| Aceternity UI     | Custom UI components                  |
-| Magic UI          | Prebuilt UI elements and design extras|
+- ⚡ Strong proficiency in React.js, Next.js, TypeScript, Tailwind CSS, and Material UI
+- 🧩 Deep understanding of software engineering best practices: SOLID, GRASP, and design patterns
+- 🛠️ Experienced with REST APIs, GraphQL, and state management (Redux, Zustand)
+- 🌍 Proven success working in remote, cross-functional teams
+- 🏆 Track record of delivering impactful products for startups and enterprises
 
 ---
 
-## 📁 Project Structure
+### 📫 Let's Connect!
 
-```bash
-├── public/
-│   ├── assets/             # Images, textures, models
-│   ├── models/             # 3D Astronaut model
-│   └── vite.svg
-├── src/
-│   ├── components/         # Reusable components
-│   ├── constants/          # Reusable datas
-│   ├── sections/           # Portfolio sections (Hero, About, etc.)
-│   ├── App.jsx             # Main app file
-│   ├── index.css           # Tailwind css
-│   └── main.jsx            # Entry point
-├── tailwind.config.js
-└── vite.config.js
-```
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rahul-singh-patel-166a15256)
+[![GitHub](https://img.shields.io/badge/GitHub-%2312100E.svg?logo=github&logoColor=white)](https://github.com/RahulSinghPatel18)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/rahul._singh18?igsh=ZndjeHBydWV1NWhn)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white)](mailto:rahulsinghpatel2002@gmail.com)
 
 ---
 
-## 🚀 Getting Started
-1. Clone the Repository
-```bash
-git clone https://github.com/Ali-Sanati/Portfolio.git
-cd Portfolio
-```
-2. Install Dependencies
-```bash
-npm install
-```
-3. Run the Development Server
-```bash
-npm run dev
-```
-The app will be available at http://localhost:5173.
-
----
-
-## 🔗 Assets
-Assets used in the project can be found [here](https://github.com/user-attachments/files/19820923/public.zip)
-
----
-
-## 📬 Contact Me
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/ali.sanatidev/reels/) 
-[![Static Badge](https://img.shields.io/badge/Youtube-%23FF0033?style=flat&logo=youtube)](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-sanati/) 
-
----
-
-## 💡 Suggestions or Feedback?
-Leave a comment on the [YouTube video](https://youtu.be/S9UQItTpwUQ) or open an issue here on GitHub.<br/>
-👉 What should I build next?
-
-- A beautiful Landing Page
-
-- A complete E-commerce site
-
-- A fun App Clone (YouTube, Netflix, etc.)
-
-Or another interactive Portfolio
-
-Let me know!
-
----
-
-## ⭐ Like This Project?
-Star the repo and [subscribe](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA??sub_confirmation=1) to the YouTube channel for more dev content! -->
+> 💬 I am actively seeking new opportunities. Feel free to reach out for collaboration, freelance projects, or hiring discussions.
