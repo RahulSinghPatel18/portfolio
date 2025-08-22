@@ -91,7 +91,7 @@ const Navbar = () => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         style={{ minHeight: "100vh" }}
       >
-        <div className="flex flex-col items-start justify-start h-full pt-24 px-30">
+        <div className="flex flex-col items-start justify-start h-full pt-24 px-36">
           <nav className="w-full">
             <Navigation onLinkClick={handleLinkClick} isMobile={true} />
           </nav>
