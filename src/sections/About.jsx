@@ -5,7 +5,7 @@ import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/FrameWorks";
 import { FaDownload } from "react-icons/fa6";
 
-const RESUME_URL = ""; // Update with your actual resume path
+const RESUME_URL = "/assets/projects/rahul-resume.pdf"; // Resume file path
 
 const DownloadResumeButton = () => (
   <div className="flex flex-col md:flex-row items-center gap-4">
