@@ -129,27 +129,27 @@ export const myProjects = [
       { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
     ],
   },
-  {
-    id: 7,
-    title: "TMDB",
-    description:
-      "A dynamic web app leveraging the TMDB API to display categorized movie, image, and person data with real-time updates.",
-    subDescription: [
-      "Integrated TMDB API for fetching and displaying categorized movie, image, and person data.",
-      "Implemented dynamic routing and real-time API integration for seamless navigation.",
-      "Optimized for performance and user experience with code splitting and lazy loading.",
-      "Applied best practices: error boundaries, reusable components, and clean state management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/tmdb.png",
-    tags: [
-      { id: 1, name: "React", path: "/assets/logos/react.svg" },
-      { id: 2, name: "TMDB API", path: "/assets/logos/tmdb.svg" },
-      { id: 3, name: "JavaScript", path: "/assets/logos/javascript.svg" },
-      { id: 4, name: "Material UI", path: "/assets/logos/materialui.svg" },
-    ],
-  },
+  // {
+  //   id: 7,
+  //   title: "TMDB",
+  //   description:
+  //     "A dynamic web app leveraging the TMDB API to display categorized movie, image, and person data with real-time updates.",
+  //   subDescription: [
+  //     "Integrated TMDB API for fetching and displaying categorized movie, image, and person data.",
+  //     "Implemented dynamic routing and real-time API integration for seamless navigation.",
+  //     "Optimized for performance and user experience with code splitting and lazy loading.",
+  //     "Applied best practices: error boundaries, reusable components, and clean state management.",
+  //   ],
+  //   href: "",
+  //   logo: "",
+  //   image: "/assets/projects/tmdb.png",
+  //   tags: [
+  //     { id: 1, name: "React", path: "/assets/logos/react.svg" },
+  //     { id: 2, name: "TMDB API", path: "/assets/logos/tmdb.svg" },
+  //     { id: 3, name: "JavaScript", path: "/assets/logos/javascript.svg" },
+  //     { id: 4, name: "Material UI", path: "/assets/logos/materialui.svg" },
+  //   ],
+  // },
 ];
 
 
